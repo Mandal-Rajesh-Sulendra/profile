@@ -1,85 +1,134 @@
-header{
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
     background-color: green;
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-border-radius: 10px;
-
-
+    border-radius: 10px;
+    padding: 20px;
 }
-h1{
 
+h1 {
     margin: 20px;
     margin-top: 50px;
 }
 
-*{
-    margin: 0%;
-}
-body{
-    margin: 0%;
-}
-
-#img{
+/* Image */
+#img {
     border-radius: 80px;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
 }
 
-#sec1{
+/* Section 1 Layout */
+#sec1 {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-top:100px ;
-    margin-left: 100px;
-    margin-bottom: 150px;
-
+    margin: 100px 50px 150px 100px;
+    flex-wrap: wrap;
 }
 
-h2{
+h2 {
     margin-left: 50px;
-}
-h3{
-    margin-left: 200px;
+    max-width: 500px;
 }
 
-footer{
+/* Section 2 & 3 */
+#sec2, #sec3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 150px;
+    padding: 20px;
+}
+
+/* Footer */
+footer {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
     background-color: green;
- border-radius: 20px;
-
+    border-radius: 20px;
+    padding: 20px;
 }
-a{
-    margin-left: 150px;
-    margin-right: 150px;
-    margin-bottom:50px ;
-    margin-top: 50px;
+
+footer a {
+    margin: 10px 20px;
     color: white;
     text-decoration: none;
+    font-size: 18px;
 }
-a:hover{
 
+footer a:hover {
     color: black;
 }
-#sec2{ 
-display: flex;
-flex-direction: column;
-align-items: center;
-margin-bottom: 150px;
-}
 
-#sec3{
-display: flex;
-flex-direction: column;
-align-items: center;
-margin-bottom: 150px;
-}
-section h1{
+/* Section Titles */
+section h1 {
     margin: 20px;
 }
 
-#sec3 ul li{
+/* Skill list */
+#sec3 ul li {
     margin: 20px;
+    font-size: 16px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    #sec1 {
+        flex-direction: column;
+        align-items: center;
+        margin: 50px 20px;
+    }
+
+    h2 {
+        margin-left: 0;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    footer a {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    h1, h2, section h1 {
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    footer a {
+        font-size: 16px;
+    }
+
+    #img {
+        max-width: 80%;
+    }
+
+    body {
+        padding: 10px;
+    }
 }
