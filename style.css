@@ -24,18 +24,20 @@ header {
 h1 {
     margin: 20px;
     margin-top: 50px;
+    animation: slideDown 1s ease-out;
 }
 
 /* Responsive Circular Image */
 #img {
     width: 100%;
-    max-width: 250px;    /* limits size on large screens */
+    max-width: 250px;
     height: auto;
-    aspect-ratio: 1 / 1;  /* keeps square shape */
-    border-radius: 50%;   /* circular */
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
     display: block;
     margin: 20px auto;
     object-fit: cover;
+    animation: zoomIn 1.2s ease-out;
 }
 
 /* Section 1 */
@@ -47,6 +49,9 @@ h1 {
     margin: 100px 50px 150px 50px;
     flex-wrap: wrap;
     text-align: center;
+    animation: fadeIn 1s ease-out;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
 }
 
 h2 {
@@ -62,6 +67,9 @@ h2 {
     margin-bottom: 150px;
     padding: 20px;
     text-align: center;
+    animation: fadeIn 1s ease-out;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
 }
 
 section h1 {
@@ -138,4 +146,20 @@ footer a:hover {
     body {
         padding: 10px;
     }
+}
+
+/* --- Animations --- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
 }
