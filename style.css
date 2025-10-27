@@ -163,3 +163,50 @@ footer a:hover {
     from { transform: scale(0.8); opacity: 0; }
     to { transform: scale(1); opacity: 1; }
 }
+
+/* ===== Skill Boxes Styling (Added) ===== */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+    justify-content: center;
+}
+
+.skill-box {
+    padding: 12px 20px;
+    border-radius: 12px;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    flex: 1 1 calc(33.333% - 20px);
+    min-width: 150px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* Unique skill colors */
+.c { background-color: #f44336; }        /* Red for C */
+.javascript { background-color: #ff9800; } /* Orange for JavaScript */
+.htmlcss { background-color: #2196f3; }    /* Blue for HTML & CSS */
+.sql { background-color: #9c27b0; }        /* Purple for SQL */
+.pandas { background-color: #4caf50; }     /* Green for Pandas */
+.python { background-color: #795548; }     /* Brown for Python */
+
+/* Responsive skill boxes */
+@media (max-width: 768px) {
+    .skill-box {
+        flex: 1 1 calc(50% - 15px);
+    }
+}
+
+@media (max-width: 480px) {
+    .skill-box {
+        flex: 1 1 100%;
+    }
+}
